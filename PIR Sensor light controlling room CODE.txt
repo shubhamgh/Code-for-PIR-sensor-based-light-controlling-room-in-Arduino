@@ -17,10 +17,14 @@ void setup()
 	pinMode(relayInput2,OUTPUT);
 	pinMode(relayInput3,OUTPUT);
 	pinMode(relayInput4,OUTPUT);
+	pinMode(5,OUTPUT);
+	pinMode(6,OUTPUT);
 }
 
 void loop()
 {
+	digitalWrite(5,HIGH);
+	digitalWrite(6,HIGH);
 	int sensorValue1=digitalRead(pirSensor1);
 	int sensorValue2=digitalRead(pirSensor2);
 	int sensorValue3=digitalRead(pirSensor3);
