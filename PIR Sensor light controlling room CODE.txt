@@ -1,0 +1,44 @@
+int pirSensor1=13;
+int pirSensor2=12;
+int pirSensor3=11;
+int pirSensor4=10;
+int relayInput1=9;
+int relayInput2=8;
+int relayInput3=7;
+int relayInput4=6;
+
+void setup()
+{
+	pinMode(pirSensor1,INPUT);
+	pinMode(pirSensor2,INPUT);
+	pinMode(pirSensor3,INPUT);
+	pinMode(pirSensor4,INPUT);
+	pinMode(relayInput1,OUTPUT);
+	pinMode(relayInput2,OUTPUT);
+	pinMode(relayInput3,OUTPUT);
+	pinMode(relayInput4,OUTPUT);
+}
+
+void loop()
+{
+	int sensorValue1=digitalRead(pirSensor1);
+	int sensorValue2=digitalRead(pirSensor2);
+	int sensorValue3=digitalRead(pirSensor3);
+	int sensorValue4=digitalRead(pirSensor4);
+	if(sensorValue1==1)
+	{
+		digitalWrite(relayInput1,LOW);
+	}
+	if(sensorValue2==1)
+	{
+		digitalWrite(relayInput2,LOW);
+	}
+	if(sensorValue3==1)
+	{
+		digitalWrite(relayInput3,LOW);
+	}
+	if(sensorValue4==1)
+	{
+		digitalWrite(relayInput4,LOW);
+	}
+}
